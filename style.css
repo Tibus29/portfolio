@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    margin: 15px;
+    border-radius: 10px;
+}
+
+header {
+    z-index: 1000;
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: -2.3em;
+    display: flex;
+    background-color: #163753;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+header > nav {
+    display: flex;
+    gap: 1em;
+}
+
+header > nav a {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 0.5em 1em; /* Ajoute de l'espace autour du texte */
+    margin-left: 0.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 2em;
+}
+
+h1 {
+    text-decoration: none;
+    color: white;
+}
+
+h2 {
+    background-color: #163753;
+    border-radius: 5px;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+h3 {
+    text-decoration: none;
+}
+
+article > figure > img, article > a > figure > img, figcaption {
+    width: 20em;
+    height: 305px;
+}
+
+footer > h2 {
+    width: 95%;
+    margin-left: 0.58em;
+}
+
+.p1, .p2, .p3{
+    padding: 0;
+    margin: 0;
+    animation: glissementDroit 1s ease-out;
+    font-size: 12em;
+}
+
+.intro {
+    margin-top: 2em;
+}
+
+.p2 {
+    text-align: center;
+}
+
+.p3 {
+    text-align: right;
+}
+
+.competences {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto 10em;
+    gap: 1.5em;
+}
+
+.competences > article, .projets > section > article, .qui > div {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 35em;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-items: center;
+    margin: 1em auto;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.competences > article:hover, .projets > section > article:hover {
+    transform: scale(1.05);
+}
+
+.competences > article > figure > figcaption {
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+.projets {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.projets > section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.projets > section > article > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+.projets > article > a > figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+*/
+
+.projets > section > article > a > figure > figcaption {
+    text-indent: 1.5em;
+    text-align: justify;
+    height: fit-content;
+}
+
+figcaption {
+    height: 100%;
+    margin-top: 1em;
+}
+
+.qui > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: fit-content;
+    height: 12em;
+}
+
+.qui > div > p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    width: 40em;
+    padding: 1em 2em;
+    text-indent: 1.5em;
+    text-align: left;
+}
+
+
+footer {
+    background-color: white;
+}
+
+form {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 30%;
+    margin-left: 33%;
+    margin-bottom: 10%;
+}
+
+/* Trait de séparation */
+form .trait-separation {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+/* Structure */
+form .corps-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+form .corps-formulaire .groupe {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+form .corps-formulaire .gauche .groupe input {
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px;
+    border: 1px solid #163753;
+    outline-color: #163753;
+    border-radius: 5px;
+}
+
+form .corps-formulaire .gauche .groupe i {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    padding: 9px 8px;
+    color: #163753;
+}
+
+form .corps-formulaire .droite {
+    margin-left: 40px;
+}
+
+form .corps-formulaire .droite .groupe {
+    height: 100%;
+}
+
+form .corps-formulaire .droite .groupe textarea {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 2px solid #163753;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+    height: 72%;
+}
+
+form .pied-formulaire button {
+    margin-top: 10px;
+    background-color: #163753;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5;
+}
+
+form .pied-formulaire button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 920) {
+    
+}
+
+/* Animation de glissement vers la gauche */
+@keyframes glissementDroit {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
